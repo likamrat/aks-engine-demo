@@ -11,17 +11,16 @@ aks-engine generate definition.json
 
 4. Show the newly created "azuredeploy.json" file
 
-3. Start the cluster deployment:
+5. Start the cluster deployment:
 az group deployment create --name "AKS-Engine-GPU" --resource-group "AKS-Engine-GPU-RG" --template-file "./_output/aksgpu/azuredeploy.json" --parameters "./_output/aksgpu/azuredeploy.parameters.json"
 
-4. Go to Azure and show resources being create in the Resource Group
+6. Go to Azure and show resources being create in the Resource Group
 
+7. Switch to the "gpu-ready-deployment" cluster directory
 
-Switch to the "gpu-ready-deployment" cluster directory
+8. kubectl get nodes -o wide --kubeconfig config-aks-engine-gpu
 
-5. kubectl get nodes -o wide --kubeconfig config-aks-engine-gpu
-
-6. Show the node GPU capacity
+9. Show the node GPU capacity
     -   kubectl describe node k8s-gpupool-36572287-0 --kubeconfig config-aks-engine-gpu
     -   Search for "capacity"
 
