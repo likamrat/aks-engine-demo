@@ -1,0 +1,44 @@
+{
+    "apiVersion": "vlabs",
+    "properties": {
+        "orchestratorProfile": {
+        "orchestratorType": "Kubernetes",
+        "orchestratorRelease": "1.13"
+        },
+        "masterProfile": {
+            "count": 1,
+            "dnsPrefix": "aksgpuready",
+            "vmSize": "Standard_DS3_v2_Promo",
+            "OSDiskSizeGB": 64,
+            "storageProfile" : "ManagedDisks"
+        },
+        "agentPoolProfiles": [
+            {
+                "name": "workerpool",
+                "count": 1,
+                "vmSize": "Standard_DS4_v2_Promo",
+                "availabilityProfile": "AvailabilitySet"
+        },
+            {
+                "name": "gpupool",
+                "count": 1,
+                "vmSize": "Standard_NC6",
+                "availabilityProfile": "AvailabilitySet"
+        } 
+        ],
+        "linuxProfile": {
+            "adminUsername": "engineadmin",
+            "ssh": {
+                "publicKeys": [
+                    {
+                        "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDAAQnGDsQsxH9lHnUi5R/j5lBvYUg/blG51Mj65OywQU+NHr2IIAaPQh32GcQJj8ntAzygHF5UMM25acI7jKEjzXhjmx4pGtMnYJQxOJarkJtXCdrlEVG90TVQepIN9gEKrT/3HFkWdujfW99rrKJlNO7J5MdoB8Z9wHL58NUumu6vfS8fm6JK3Llax0uJlGWNXaj1HCUAKX7aDXPEwScVTZ5pp2cmWMs3VpW0Vyo2sJi6OxCO1sybrsoSbbhKfJpIOKqBGIROn3HOus0Xo6maRhsj79a74hGAGMY+n1Sn5YNa+Y8MqUAR2T7N0cOeJSX5PU7h6VfK2DAJ912dwa1PI4uwJiDk3v1aethCpYq8cjPb5tFg6G96LKCS7g+5vsA8BGPU6CPn8Wln8+OHfFWzTTsldOj5ppZByDT9ZNpPxL32m+8wwxXqTdDrEMGGlIVDHo87P4BTdsKUEoxDclFAQ8GZOqfW5T3IGXhRObQ2K2w7UvmFixfN5H8c2jaEPexdGxLD03ZftxfRSv7iPjhGUPVMcNTjLcm9w3P8ZKqoCZvuv1bi1maawfHOYBTckc06Rs7iOhx48eguuFLv1V5lr28Tp/0PKMATn8MOLnkhJaVreOSVbC6QavsiQohkVIM5EDIjZ3n0lq/+xxAwjQlGCdR6X7ChF5EuZpC3GRNnaw== likamrat@microsoft.com"
+                    }
+                ]
+            }
+        },
+        "servicePrincipalProfile": {
+            "clientId": "e5955129-5a7a-4f31-bd53-2f4ca9f36987",
+            "secret": "aksengine12320275"
+        }
+  }
+}

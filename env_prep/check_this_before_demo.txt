@@ -1,0 +1,13 @@
+Run the following commands:
+---------------------------
+az account set --subscription e73c1dbe-2574-4f38-9e8f-c813757b1786
+
+Open the following urls:
+------------------------
+https://ms.portal.azure.com
+https://github.com/Azure/aks-engine
+
+To do:
+------------------------
+delete the "_output" directory 
+delete the "translations" directory

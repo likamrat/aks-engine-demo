@@ -1,0 +1,7 @@
+.DS_Store
+.vscode
+**/_output
+**/translations
+cheatsheet.txt
+config-aks-engine-gpu
+config-aks-engine-cosmos
