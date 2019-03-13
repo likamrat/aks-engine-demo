@@ -5,6 +5,7 @@ AKS-Engine GPU-Enabled K8s Cluster with Multiple Node Pools
 1. Go to the "gpu-deployment" directory
 
 2. Talk about the cluster "definition.json" file
+    -   Show the GPU Standard_NC6 VM
 
 3. Generate the ARM template from the definition file:
 aks-engine generate definition.json
@@ -33,4 +34,4 @@ AKS-Engine CosmosDB-Enabled K8s Cluster
 
 2. Show the "cosmosEtcd" parameter in the "definition.json" file (line 15)
 
-3. Go to Azure and show the CosmosDB instance 
+3. Go to Azure and show the CosmosDB instance in the “AKS-Engine-Cosmos-Ready-RG” Resource Group
